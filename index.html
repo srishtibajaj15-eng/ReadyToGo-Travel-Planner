@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>readytogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="top-nav">
+      <div class="logo-area">
+        <img src="logo.svg" alt="readytogo logo" class="logo-img">
+        <div class="brand-block">
+          <span class="brand">readytogo</span>
+          <p class="quote">"Collect moments, not things. Let every trip tell a beautiful story."</p>
+        </div>
+      </div>
+      <button id="aboutButton" class="primary-btn" type="button">About Me</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="aboutCard" class="card about-slide">
+      <h2>About Me</h2>
+      <div class="about-details">
+        <p><strong>Name:</strong> Srishti</p>
+        <p><strong>ID:</strong> 2511981241</p>
+        <p><strong>Section:</strong> D1</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Add Your Trip</h2>
+      <form id="tripForm">
+        <input type="hidden" id="tripId">
+
+        <div class="form-group">
+          <label for="destination">Destination</label>
+          <input type="text" id="destination" placeholder="Enter your destination">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate">
+          </div>
+
+          <div class="form-group">
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="budget">Budget</label>
+            <input type="number" id="budget" placeholder="Enter your budget">
+          </div>
+
+          <div class="form-group">
+            <label for="travelType">Travel Type</label>
+            <select id="travelType">
+              <option value="Solo">Solo</option>
+              <option value="Family">Family</option>
+              <option value="Friends">Friends</option>
+              <option value="Business">Business</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Notes</label>
+          <textarea id="notes" rows="4" placeholder="Add special notes for your trip"></textarea>
+        </div>
+
+        <p id="formMessage" class="message"></p>
+
+        <button type="submit" id="saveButton" class="primary-btn">Save Trip</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Saved Trips</h2>
+      <div id="tripList" class="trip-list"></div>
+      <p id="tripEmptyMessage" class="empty-message">No trips planned yet. Start creating your first adventure.</p>
+    </section>
+
+    <section class="card">
+      <h2>Packing Checklist</h2>
+      <p id="checklistTripLabel" class="progress-text">Select a trip to manage its packing checklist.</p>
+
+      <div class="checklist-input-row">
+        <input type="text" id="checklistInput" placeholder="Add item to pack">
+        <button id="addChecklistButton" class="primary-btn" type="button">Add Item</button>
+      </div>
+
+      <p id="checklistProgress" class="progress-text">0 of 0 items packed</p>
+      <div id="checklistItems" class="checklist-list"></div>
+      <p id="checklistEmptyMessage" class="empty-message">Choose a trip first, then add packing items.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Designed for sweet and simple travel planning.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
